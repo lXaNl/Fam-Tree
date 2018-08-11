@@ -26,6 +26,12 @@ public class Main {
     }
 
     public void addUser(int id, String name, LocalDate birtday) {
+        for (Person p : people) {
+            if (p.getId() == id){
+                System.out.println("ID - " +id+ " already exist !");
+                break;
+            }
+        }
         people.add(new Person(id, name, birtday));
     }
 
